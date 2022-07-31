@@ -154,11 +154,10 @@ if __name__ == "__main__":
         "labelme_images",
         help="Directory to labelme images and annotation json files.",
         type=str,
-        required=False,
         default="data"
     )
     parser.add_argument(
-        "--output", help="Output json file path.", default="train.json", required=False
+        "--output", help="Output json file path.", default="train.json"
     )
     args = parser.parse_args()
     print(args)

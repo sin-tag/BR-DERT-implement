@@ -154,11 +154,13 @@ if __name__ == "__main__":
         "labelme_images",
         help="Directory to labelme images and annotation json files.",
         type=str,
+        required=False,
         default="data"
     )
     parser.add_argument(
-        "--output", help="Output json file path.", default="train.json"
+        "--output", help="Output json file path.", default="train.json", required=False
     )
     args = parser.parse_args()
-    labelme_json = glob.glob(os.path.join(args.labelme_images, "*.json"))
-    labelme2coco(labelme_json, args.output)
+    print(args)
+    labelme_json = glob.glob(os.path.join("/content/BR-DETR-implement/data", "*.json"))
+    labelme2coco(labelme_json, "/content/BR-DETR-implement/output.json")

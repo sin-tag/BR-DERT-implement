@@ -145,21 +145,5 @@ class labelme2coco(object):
 
 
 if __name__ == "__main__":
-    import argparse
-
-    parser = argparse.ArgumentParser(
-        description="labelme annotation to coco data json file."
-    )
-    parser.add_argument(
-        "labelme_images",
-        help="Directory to labelme images and annotation json files.",
-        type=str,
-        default="data"
-    )
-    parser.add_argument(
-        "--output", help="Output json file path.", default="train.json"
-    )
-    args = parser.parse_args()
-    print(args)
     labelme_json = glob.glob(os.path.join("/content/BR-DETR-implement/data", "*.json"))
     labelme2coco(labelme_json, "/content/BR-DETR-implement/output.json")

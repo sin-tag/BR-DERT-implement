@@ -16,10 +16,7 @@ from torch import nn, Tensor
 from PEG import PEG, PEGThree
 from torch import einsum
 
-from einops import rearrange, repeat
-from einops.layers.torch import Rearrange
-from .plugplay import *
-from .DeformableConv import DeformableConv2d
+from plugplay import *
 
 class Transformer(nn.Module):
 

@@ -13,7 +13,7 @@ from typing import Optional, List
 import torch
 import torch.nn.functional as F
 from torch import nn, Tensor
-from .PEG import PEG, PEGThree
+from PEG import PEG, PEGThree
 from torch import einsum
 
 from einops import rearrange, repeat

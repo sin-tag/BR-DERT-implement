@@ -5,7 +5,7 @@ import torch.nn.functional as F
 from einops import rearrange, repeat
 from einops.layers.torch import Rearrange
 
-from .DeformableConv import DeformableConv2d
+from DeformableConv import DeformableConv2d
 
 class DepthWiseConv2d(nn.Module):
     def __init__(self, dim_in, dim_out, kernel_size, padding, stride, bias = True):
